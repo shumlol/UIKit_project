@@ -19,8 +19,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func segmentControlAction() {
+        
     }
     
+    // MARK: - Private Methods
     private func setupMainLabel() {
         mainLabel.text = "Quick help text and Label"
         mainLabel.font = mainLabel.font.withSize(35)
