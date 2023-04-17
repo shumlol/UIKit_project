@@ -19,7 +19,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func segmentControlAction() {
-        
+        switch segmentControl.selectedSegmentIndex {
+        case 0:
+            mainLabel.text = "The first segment is selected"
+            mainLabel.textColor = .white
+        case 1:
+            mainLabel.text = "The second segment is selected"
+            mainLabel.textColor = .white
+        case 2:
+            mainLabel.text = "The third segment is selected"
+            mainLabel.textColor = .white
+        default:
+            mainLabel.text = "The four segment is selected"
+            mainLabel.textColor = .black
+        }
     }
     
     // MARK: - Private Methods
