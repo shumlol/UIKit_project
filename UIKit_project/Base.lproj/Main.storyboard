@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="Arf-Za-7PM">
-                                <rect key="frame" x="16" y="70" width="288" height="107.5"/>
+                                <rect key="frame" x="16" y="70" width="288" height="193.5"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OTX-PC-XS2">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="32"/>
@@ -28,7 +28,7 @@
                                         </segments>
                                         <color key="selectedSegmentTintColor" systemColor="systemRedColor"/>
                                         <connections>
-                                            <action selector="segmentControlAction" destination="BYZ-38-t0r" eventType="valueChanged" id="wn7-wp-0Or"/>
+                                            <action selector="segmentControlAction" destination="BYZ-38-t0r" eventType="valueChanged" id="HWt-lW-BOd"/>
                                         </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zy4-sq-am2">
@@ -37,6 +37,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bDY-3P-TCY">
+                                        <rect key="frame" x="-2" y="163.5" width="292" height="31"/>
+                                        <connections>
+                                            <action selector="sliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="xgB-RZ-WjN"/>
+                                        </connections>
+                                    </slider>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -50,7 +56,8 @@
                     </view>
                     <connections>
                         <outlet property="mainLabel" destination="Zy4-sq-am2" id="8dh-83-PU2"/>
-                        <outlet property="segmentControl" destination="OTX-PC-XS2" id="2aJ-85-zGK"/>
+                        <outlet property="segmentControl" destination="OTX-PC-XS2" id="Yy3-69-AHq"/>
+                        <outlet property="slider" destination="bDY-3P-TCY" id="AS8-7b-hp8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

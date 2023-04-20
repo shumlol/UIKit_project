@@ -7,13 +7,19 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
     @IBOutlet var mainLabel: UILabel!
     @IBOutlet var segmentControl: UISegmentedControl!
+    @IBOutlet var slider: UISlider!
+    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupMainLabel()
+        setupSlider()
         
         segmentControl.insertSegment(withTitle: "Four", at: 3, animated: false)
     }
@@ -35,12 +41,25 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func sliderAction() {
+    }
+    
     // MARK: - Private Methods
     private func setupMainLabel() {
-        mainLabel.text = "Quick help text and Label"
+        mainLabel.text = String(slider.value)
         mainLabel.font = mainLabel.font.withSize(35)
         mainLabel.textAlignment = .center
         mainLabel.numberOfLines = 2
+    }
+    
+    private func setupSlider() {
+        slider.value = 1
+        slider.minimumValue = 1
+        slider.maximumValue = 100
+        slider.minimumTrackTintColor = .white
+        slider.maximumTrackTintColor = .black
+        slider.thumbTintColor = .white
+        
     }
     
 }
