@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="Arf-Za-7PM">
-                                <rect key="frame" x="16" y="70" width="288" height="193.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Arf-Za-7PM">
+                                <rect key="frame" x="16" y="70" width="288" height="512.5"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OTX-PC-XS2">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="32"/>
@@ -32,17 +32,58 @@
                                         </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zy4-sq-am2">
-                                        <rect key="frame" x="0.0" y="87" width="288" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="51" width="288" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bDY-3P-TCY">
-                                        <rect key="frame" x="-2" y="163.5" width="292" height="31"/>
+                                        <rect key="frame" x="-2" y="91.5" width="292" height="31"/>
                                         <connections>
                                             <action selector="sliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="xgB-RZ-WjN"/>
                                         </connections>
                                     </slider>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cWv-KA-blv">
+                                        <rect key="frame" x="0.0" y="141.5" width="288" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BC1-c3-cBG">
+                                        <rect key="frame" x="0.0" y="195.5" width="288" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doneButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="PhZ-5w-GGv"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="QEB-uv-cjH">
+                                        <rect key="frame" x="0.0" y="245.5" width="288" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hide Data Picker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tI-Fc-b1s">
+                                                <rect key="frame" x="0.0" y="0.0" width="213" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qbo-Mx-UFb">
+                                                <rect key="frame" x="239" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" systemColor="systemRedColor"/>
+                                                <color key="thumbTintColor" systemColor="systemBlueColor"/>
+                                                <connections>
+                                                    <action selector="switchAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="6g1-Pw-uRn"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="Nnz-BJ-CYo">
+                                        <rect key="frame" x="0.0" y="296.5" width="288" height="216"/>
+                                        <connections>
+                                            <action selector="dataPickerAction" destination="BYZ-38-t0r" eventType="valueChanged" id="hwJ-qL-FYR"/>
+                                        </connections>
+                                    </datePicker>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -55,17 +96,23 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dataPicker" destination="Nnz-BJ-CYo" id="gsv-dW-WVz"/>
                         <outlet property="mainLabel" destination="Zy4-sq-am2" id="8dh-83-PU2"/>
                         <outlet property="segmentControl" destination="OTX-PC-XS2" id="Yy3-69-AHq"/>
                         <outlet property="slider" destination="bDY-3P-TCY" id="AS8-7b-hp8"/>
+                        <outlet property="switchLabel" destination="6tI-Fc-b1s" id="SYy-5N-Mta"/>
+                        <outlet property="textField" destination="cWv-KA-blv" id="VKh-kE-y84"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24" y="4"/>
+            <point key="canvasLocation" x="23.188405797101453" y="3.3482142857142856"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
